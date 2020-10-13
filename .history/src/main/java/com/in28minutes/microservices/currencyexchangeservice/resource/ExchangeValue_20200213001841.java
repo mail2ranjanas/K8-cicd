@@ -60,8 +60,8 @@ public class ExchangeValue {
 
 	@Override
 	public String toString() {
-		return "ExchangeValue [id=" + id + ", from=" + from + ", to=" + to + ", conversionMultiples="
-				+ conversionMultiple + ", exchangeEnvironmentInfoformation=" + exchangeEnvironmentInfo + "]";
+		return "ExchangeValue [id=" + id + ", from=" + from + ", to=" + to + ", conversionMultiple="
+				+ conversionMultiple + ", exchangeEnvironmentInfo=" + exchangeEnvironmentInfo + "]";
 	}
 	
 }
