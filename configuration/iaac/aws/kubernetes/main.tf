@@ -80,8 +80,4 @@ resource "kubernetes_cluster_role_binding" "example" {
 # Needed to set the default region
 provider "aws" {
   region  = "ap-southeast-2"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5a2a06a5cc012072db7043af739d343c5e0b9098
