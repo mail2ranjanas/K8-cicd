@@ -36,7 +36,7 @@ stages:
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'manifacts'
+        ArtifactName: 'manifests'
         publishLocation: 'Container'
   - job: Deploy
     displayName: Deploy Image
@@ -46,7 +46,7 @@ stages:
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'current'
-        artifactName: 'manifacts'
+        artifactName: 'manifests'
         itemPattern: '**/*.yaml'
         targetPath: '$(System.ArtifactsDirectory)'
     - task: KubernetesManifest@0
@@ -54,6 +54,6 @@ stages:
         action: 'deploy'
         kubernetesServiceConnection: 'AWS-K8'
         namespace: 'default'
-        manifests: '$(System.ArtifactsDirectory)/kubernetes/deployment.yaml'
-        containers: 'in28min/currency-exchange-devops:$(tag)'
+        manifests: '$(System.ArtifactsDirectory)/configuration/kubernetes/deployment.yaml'
+        containers: in28min/currency-exchange-devops:$(tag)
   
