@@ -55,5 +55,5 @@ stages:
         kubernetesServiceConnection: 'AWS-K8'
         namespace: 'default'
         manifests: '$(System.ArtifactsDirectory)/configuration/kubernetes/deployment.yaml'
-        containers: in28min/currency-exchange-devops:$(tag)
+        containers: 'mail2ranjanas/cicd:$(tag)'
   
